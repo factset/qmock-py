@@ -1,0 +1,15 @@
+language: python
+python:
+    - "2.7"
+    - "3.5"
+    - "3.6.7"
+    - "3.6.8"
+    - "3.7.1"
+    - "3.7.2"
+
+# normally need something like tox-travis to avoid running every env N times.
+# but our tox,ini only defines 1 env (python) because we already expect to
+# manage python versions outside of tox. ie: travis is doing the same thing as
+# our local test_all_envs.sh.
+install: pip install tox
+script: tox
