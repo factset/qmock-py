@@ -1,6 +1,8 @@
 # `qmock-py`
 > A framework for Queue-based call validation on mock objects.
 
+[![Build Status](https://travis-ci.com/factset/qmock-py.svg?branch=master)](https://travis-ci.com/factset/qmock-py)
+
 ## Rationale
 ### Background
 To verify calls on a mock object, the standard `mock` library builds a history
@@ -194,4 +196,4 @@ breaking changes to `unittest.mock` across *patch* versions (eg: from Python
 time. So we have to manually iterate through environments and run `tox` in each.
 This is done by `test_all_envs.sh`.
 
-If you run `tox` directly, it will use the current `python` command.
+If you run `tox` directly, it will use the `python` currently in your enviroment.
